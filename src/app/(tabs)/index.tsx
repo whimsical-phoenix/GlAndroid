@@ -125,7 +125,7 @@ import Login from '@/src/components/Login/Login';
 import { User, onAuthStateChanged } from 'firebase/auth';
 import { FIREBASE_AUTH } from '@/FirebaseConfig';
 import messaging from '@react-native-firebase/messaging';
-import VideoCallScreen from './VideoCallScreen'; // Import the VideoCallScreen component
+import VideoCall from '@/src/components/CarouselTwo/VideoCall'; // Import the VideoCallScreen component
 
 const Stack = createNativeStackNavigator();
 
@@ -164,7 +164,7 @@ export default function TabOneScreen() {
         {user ? (
           <>
             <Stack.Screen options={{ headerShown: false }} name="Garden Loft Home" component={InsideApp} />
-            <Stack.Screen name="VideoCall" component={VideoCallScreen} /> {/* VideoCallScreen navigation */}
+            <Stack.Screen name="VideoCall" component={VideoCall} /> {/* VideoCallScreen navigation */}
           </>
         ) : (
           <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
