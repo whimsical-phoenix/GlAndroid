@@ -140,6 +140,19 @@ android {
         }
     }
 }
+android {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    dependencies {
+        implementation(name: 'mobilertc', ext: 'aar')
+        implementation(name: 'commonlib', ext: 'aar')
+        // Add other .aar files similarly
+    }
+}
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
